@@ -3,16 +3,31 @@ import axios from 'axios'
 const URL = "https://amithekapi.onrender.com/api/message/get-messages"
 
 
-
 export const retrieveMessages = async () => {
-    const response = await axios.get(URL)
-    return response.data
-}
+    try {
+        const response = await axios.get(URL, { 
+            withCredentials: true  // Ensure cookies are sent with the request
+        });
+        return response.data;
+    } catch (error) {
+        console.error("Error fetching messages:", error.response?.data || error.message);
+        return { error: "Failed to retrieve messages" };
+    }
+};
+
 
 export const retrieveMessageById = async (id) => {
-    const response = await axios.get(`${URL}/${id}`)
-    return response.data
-}
+    try {
+        const response = await axios.get(`${URL}/${id}`, {
+            withCredentials: true,  // ✅ Ensures cookies (JWT token) are sent
+        });
+        return response.data;
+    } catch (error) {
+        console.error("Error fetching message by ID:", error.response?.data || error.message);
+        return { error: "Failed to fetch message" };
+    }
+};
+
 
 export const checkUser = async () => {
     try {

@@ -10,7 +10,7 @@ function Dashboard() {
     const fetchMessages = async () => {
       try {
         const data = await retrieveMessages();
-        console.log(data);
+        //console.log(data);
         setMessages(data);
       } catch (err) {
         console.log(err);

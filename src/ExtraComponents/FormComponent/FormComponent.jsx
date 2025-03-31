@@ -30,7 +30,7 @@ function FormComponent() {
     };
 
     try {
-        const response = await axios.post("http://localhost:5000/api/message/save-message", formValues)
+        const response = await axios.post("https://amithekapi.onrender.com/api/message/save-message", formValues)
         console.log(response.data)
         alert("Enquiry Submitted Successfully!")
     }catch (err) {

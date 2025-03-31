@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const URL = "http://localhost:5000/api/message/get-messages"
+const URL = "https://amithekapi.onrender.com/api/message/get-messages"
 
 
 
@@ -16,7 +16,7 @@ export const retrieveMessageById = async (id) => {
 
 export const checkUser = async () => {
     try {
-        const response = await axios.get('http://localhost:5000/api/dashboard', { withCredentials: true });
+        const response = await axios.get('https://amithekapi.onrender.com/api/dashboard', { withCredentials: true });
         return response.data;  // Ensure response is structured correctly
     } catch (error) {
         console.error("Error fetching user authentication:", error.response?.data || error.message);

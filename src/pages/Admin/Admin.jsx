@@ -28,7 +28,7 @@ function Admin() {
           };
       
           try {
-            const response = await axios.post("http://localhost:5000/api/auth/login", formValues, {withCredentials: true});
+            const response = await axios.post("https://amithekapi.onrender.com/api/auth/login", formValues, {withCredentials: true});
             // console.log("Login Successful:", response.data);
             // alert("Validated Successfully");
               navigate('/dashboard')    

@@ -61,6 +61,12 @@ export const headerData = [
     name: 'Contacts',
     path: '/contacts',
     logo: ''
+  },
+  {
+    id: 5,
+    name: 'login',
+    path: '/admin',
+    logo: ''
   }
 ]
 

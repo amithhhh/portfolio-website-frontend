@@ -66,7 +66,7 @@ export const headerData = [
     id: 5,
     name: 'login',
     path: '/admin',
-    logo: ''
+    logo: 'no logo'
   }
 ]
 
